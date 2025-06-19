@@ -33,9 +33,8 @@ export default function Verify({ title, user, button, email }) {
 
   function handleVerifyEmail() {
     if (code.length < 4) {
-      inputsRef.current.values = undefined;
-      setError(true); //Throw error......
       setCode(() => []);
+      setError(true); //Throw error......
       return;
     }
     // send email verify code to the backend......
@@ -44,6 +43,7 @@ export default function Verify({ title, user, button, email }) {
 
   function handleResetPassword() {
     if (code.length < 4) {
+      setCode(() => []);
       setError(true); //Throw error......
       return;
     }

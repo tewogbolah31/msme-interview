@@ -18,7 +18,7 @@ export default function ForgetPasswordPage() {
 
     //check for validation and errors
     console.log(userEmail); // user email send to backend if there is no error
-    navigate("/dashboard");
+    navigate("/reset-password");
   }
   return (
     <div className="signupBox">
